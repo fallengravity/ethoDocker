@@ -9,7 +9,7 @@ cd ethoDocker
 make image
 ```
 
-Now setup a service inside /etc/systemd/system/<name>.service:
+Now setup a service inside /etc/systemd/system/`<name>`.service:
 
 ```
 [Unit]
