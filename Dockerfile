@@ -15,6 +15,6 @@ FROM alpine:latest
 RUN apk add --no-cache ca-certificates
 COPY --from=builder /usr/local/bin/geth /usr/local/bin/geth-ether1
 
-EXPOSE 30305 30305/udp
+EXPOSE 30305 30305/udp 8545 8545/udp
 ENTRYPOINT ["geth-ether1"]
 CMD ["--syncmode=fast", "--cache=512", "--rpc", '--rpcaddr="0.0.0.0"' ]
