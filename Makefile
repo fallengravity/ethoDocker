@@ -9,7 +9,7 @@ build: env
 	docker build -t ether1:${GIT_REF} .
 
 daemon: build
-	@docker run --mount source=ether1,target=/root ether1:${GIT_REF} -p 8545:8545
+	@docker run -p 8545:8545 --mount source=ether1,target=/root ether1:${GIT_REF}
 
 node: daemon
 
